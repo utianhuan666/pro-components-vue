@@ -19,6 +19,7 @@
   "license": "ISC",
   "packageManager": "pnpm@10.12.1",
   "devDependencies": {
+    "@css-render/vue3-ssr": "^0.15.14",
     "dayjs": "^1.11.13",
     "lodash-es": "^4.17.21",
     "naive-ui": "^2.42.0",
