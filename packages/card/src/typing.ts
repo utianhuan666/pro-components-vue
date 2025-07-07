@@ -1,5 +1,6 @@
-import type { TabPaneProps as _TabPaneProps, TabsProps as _TabsProps } from 'naive-ui'
-import type { CSSProperties, VNode, Ref } from 'vue'
+import type { TabPaneProps, TabsProps } from 'naive-ui'
+
+import type { CSSProperties, VNode, Ref, HTMLAttributes, DefineComponent } from 'vue'
 export type BreakPoint = 'xxl' | 'xl' | 'lg' | 'md' | 'sm' | 'xs'
 export type Gutter = number | Partial<Record<BreakPoint, number>>
 export type ColSpanType = number | string
@@ -68,7 +69,27 @@ export type CardPropsBase = {
   /** 是否展示选中样式 */
   checked?: boolean
   /** 选中改变 */
-  //   onChecked?: (e: MouseEvent<HTMLDivElement, MouseEvent>) => void;
+  onChecked?: (e: MouseEvent) => void
   /** card的阴影 */
   boxShadow?: boolean
 }
+
+export type EasyCardTabsProps = {
+  // 透传的card样式props
+  cardProps?: CardPropsBase
+} & TabsProps
+
+export type CardProps = {
+  /* 标签栏配置 */
+  tabs?: EasyCardTabsProps
+} & CardPropsBase &
+  Omit<HTMLAttributes, 'title'>
+
+export type EasyCardTabPaneProps = {
+  /* key */
+  key?: string
+  /* EasyCard相关属性透传 */
+  CardProps?: CardProps
+} & TabPaneProps
+
+export type CardType = DefineComponent<CardProps>

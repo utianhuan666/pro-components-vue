@@ -1,13 +1,15 @@
 <template>
-  <div v-for="(item, index) in items" :key="index">
-    {{ item }}
-  </div>
+  <div v-for="item in items">{{ item }}</div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, reactive } from 'vue'
 
-const items = ref(['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5'])
+const items = ref(['Item 1', 'Item 2', 'Item 3'])
+
 </script>
 
-<style lang="scss" scoped></style>
+
+<style lang="scss" scoped>
+
+</style>
