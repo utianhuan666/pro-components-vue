@@ -1,4 +1,3 @@
-
 import { setup } from '@css-render/vue3-ssr'
 import { NConfigProvider } from 'naive-ui'
 import { useRoute } from 'vitepress'
