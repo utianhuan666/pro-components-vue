@@ -1,74 +1,74 @@
-import type { TabPaneProps, TabsProps } from "naive-ui";
-import type { CSSProperties, VNode,Ref } from "vue";
-export type BreakPoint = "xxl" | "xl" | "lg" | "md" | "sm" | "xs";
-export type Gutter = number | Partial<Record<BreakPoint, number>>;
-export type ColSpanType = number | string;
+import type { TabPaneProps as _TabPaneProps, TabsProps as _TabsProps } from 'naive-ui'
+import type { CSSProperties, VNode, Ref } from 'vue'
+export type BreakPoint = 'xxl' | 'xl' | 'lg' | 'md' | 'sm' | 'xs'
+export type Gutter = number | Partial<Record<BreakPoint, number>>
+export type ColSpanType = number | string
 
-type CollapsibleType = "icon" | "header" | boolean;
-type CardPropsBase = {
+type CollapsibleType = 'icon' | 'header' | boolean
+export type CardPropsBase = {
   /* 标题样式 */
-  headStyle?: CSSProperties;
+  headStyle?: CSSProperties
   /* 内容样式 */
-  bodyStyle?: CSSProperties;
+  bodyStyle?: CSSProperties
   /* 页头是否有分割线 */
-  headerBordered?: boolean;
+  headerBordered?: boolean
   /* 卡片标题 */
-  title?: VNode;
+  title?: VNode
   /* 副标题 */
-  subTitle?: VNode;
+  subTitle?: VNode
   /* 标题说明 */
-  tooltip?: string | VNode | (() => VNode);
+  tooltip?: string | VNode | (() => VNode)
   /* 右上角自定义区域 */
-  extra?: VNode;
+  extra?: VNode
   /* 布局,center代表垂直居中 */
-  layout?: "default" | "center";
+  layout?: 'default' | 'center'
   /* 卡片类型 */
-  type?: "default" | "inner";
+  type?: 'default' | 'inner'
   /* 指定Flex方向,仅在嵌套子卡片时有效 */
-  direaction?: "column" | "row";
+  direaction?: 'column' | 'row'
   /* 是否自动换行,仅在嵌套子卡片时有效 */
-  wrap?: boolean;
+  wrap?: boolean
   /* 尺寸 */
-  size?: "default" | "small";
+  size?: 'default' | 'small'
   /* 加载中 */
-  loading?: boolean | VNode;
+  loading?: boolean | VNode
   /* 栅格布局宽度,24栅格,支持指定宽度或百分比,需要支持响应式 colSpan={{xs:12,sm:6}} */
-  colSpan?: ColSpanType | Partial<Record<BreakPoint, ColSpanType>>;
+  colSpan?: ColSpanType | Partial<Record<BreakPoint, ColSpanType>>
   /* 栅格样式 */
-  colStyle?: CSSProperties;
+  colStyle?: CSSProperties
   /* 栅格间距 */
-  colGap?: Gutter | Gutter[];
+  colGap?: Gutter | Gutter[]
   /* 操作按钮 */
-  actions?: VNode[] | VNode;
+  actions?: VNode[] | VNode
   /* 拆分卡片方式 */
-  split?: "horizontal" | "vertical";
+  split?: 'horizontal' | 'vertical'
   /* 是否有边框 */
-  bordered?: boolean;
+  bordered?: boolean
   /**
    * 鼠标移过时可浮起
    * @default false
    */
-  hoverable?: boolean;
+  hoverable?: boolean
   /* 幽灵模式,即是否取消卡片内容区域的padding和背景颜色 */
-  ghost?: boolean;
+  ghost?: boolean
   /* 是否可折叠 */
-  collapsible?: CollapsibleType;
+  collapsible?: CollapsibleType
   /* 受控collapsed属性 */
-  collapsed?: boolean;
+  collapsed?: boolean
   /* 折叠按钮自定义节点 */
-  collapsibleIconRender?: ({ collapsed }: { collapsed: boolean }) => VNode;
+  collapsibleIconRender?: ({ collapsed }: { collapsed: boolean }) => VNode
   /* 配置默认是否折叠 */
-  defaultCollapsed?: boolean;
+  defaultCollapsed?: boolean
   /* 收起卡片的事件 */
-  onCollapse?: (collapsed: boolean) => void;
+  onCollapse?: (collapsed: boolean) => void
   /* 前缀 */
-  prefixCls?: string;
+  prefixCls?: string
   /** ProCard 的 ref */
-  ref?: Ref<HTMLDivElement | undefined>;
+  ref?: Ref<HTMLDivElement | undefined>
   /** 是否展示选中样式 */
-  checked?: boolean;
+  checked?: boolean
   /** 选中改变 */
-//   onChecked?: (e: MouseEvent<HTMLDivElement, MouseEvent>) => void;
+  //   onChecked?: (e: MouseEvent<HTMLDivElement, MouseEvent>) => void;
   /** card的阴影 */
-  boxShadow?: boolean;
-};
+  boxShadow?: boolean
+}
