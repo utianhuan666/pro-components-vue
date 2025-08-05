@@ -22,15 +22,24 @@
 
 <script setup lang="ts">
 import { ref, reactive } from 'vue'
+import { useVModel } from '@vueuse/core'
 
-interface Props {
+interface CardProps {
   title?: string
   bordered?: boolean
 }
 
-withDefaults(defineProps<Props>(), {
-  bordered: true
+const props = withDefaults(defineProps<CardProps>(), {
+  title: '',
+  bordered: false
 })
+</script>
+
+<script lang="ts">
+// 添加默认导出
+export default {
+  name: 'Card'
+}
 </script>
 
 <style lang="scss" scoped>

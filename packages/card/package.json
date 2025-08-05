@@ -1,13 +1,29 @@
 {
   "name": "@easy-components-vue/card",
   "version": "0.0.1",
+  "description": "@easy-components-vue/card",
   "private": true,
-  "main": "./src/index.ts",
-  "module": "./src/index.ts",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "types": "es/index.d.ts",
+  "scripts": {
+    "build": "father build",
+    "dev": "vite serve examples"
+  },
   "peerDependencies": {
     "vue": "^3.0.0",
     "naive-ui": "^2.0.0"
   },
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "@vicons/antd": "^0.13.0",
+    "sass": "^1.89.2",
+    "classnames": "^2.3.2",
+    "lodash-es": "^4.17.21",
+    "@vueuse/core": "^13.4.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.4",
+    "vite": "^4.3.9",
+    "@vitejs/plugin-vue": "^4.2.3"
+  }
 }
